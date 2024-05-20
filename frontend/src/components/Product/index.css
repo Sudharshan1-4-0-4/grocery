@@ -1,0 +1,30 @@
+.product-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    
+    flex-wrap: wrap;
+    max-width: 800px;
+}
+
+.product-item {
+    border-style: solid;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    margin: 10px;
+    background-color: azure;
+    box-shadow: inset;
+
+}
+.image {
+    height: 200px;
+    width: 300px;
+    border-radius: 42px;
+    border-style: hidden;
+    box-shadow: inset;
+    /* transition: 0.3ms;
+    position: relative; */
+}
