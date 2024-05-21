@@ -44,10 +44,10 @@ POST http://localhost:4001/orders/
 Content-Type: application/json
 
 {   
-    "order_id":1,
-    "product_id":2,
-    "user_id": 2,
-    "address": "kaira, 26/421, kadapa"
+    
+    "product_id":4,
+    "user_name": "kajk",
+    "address": "chdarna, 26/421, kadapa"
     
 }
 

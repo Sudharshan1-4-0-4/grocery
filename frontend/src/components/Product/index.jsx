@@ -1,9 +1,16 @@
 import React from 'react';
 import './index.css';
 
-const Product = (props) => {
+const Product = ({data, click}) => {
   
-  const { data } = props;
+  
+
+  
+
+  const clickProduct = (product_id) => {
+   
+    click(product_id);
+  }
 
   if (!Array.isArray(data)) {
     console.error('Invalid prop: data should be an array');
@@ -19,6 +26,7 @@ const Product = (props) => {
             <img src={item.product_image} alt={item.product_name} className='image'/>
             <h3>{item.product_name}</h3>
             <p>Rate: ${item.product_rate}</p>
+            <button className='button' onClick={() => clickProduct(item.product_id)}>Place Order</button>
           </div>
         ))
       ) : (

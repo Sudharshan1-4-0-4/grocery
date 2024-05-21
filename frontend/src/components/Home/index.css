@@ -24,3 +24,13 @@ body {
     margin-left: 5px;
     
 }
+/* ParentComponent.css */
+
+    /* ParentComponent.css */
+.parent-container {
+    position: relative;
+    padding: 20px;
+    border: 1px solid #ccc;
+  }
+  
+

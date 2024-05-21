@@ -122,24 +122,24 @@ app.delete("/user/:userId/", async (request, response) => {
 
 
 app.post("/orders/", async (request, response) => {
-  const { order_id, product_id, user_id, address } = request.body;
+  const { product_id, user_name, address } = request.body;
   
-  const selectUserQuery = `SELECT * FROM user_details WHERE id = '${user_id}'`;
+  const selectUserQuery = `SELECT * FROM user_details WHERE name = '${user_name}'`;
   const dbUser = await db.get(selectUserQuery);
   if (dbUser === undefined) {
-    response.status = 400;
+    response.status(400);
     response.send("User Not exists");
   } else {
    
     const createOrderQuery = `
     INSERT INTO 
-    orders (order_id, product_id, user_id, address) 
+    orders ( product_id, user_name, address) 
     VALUES 
       (
         
-        ${order_id},
+        
         ${product_id},
-        ${user_id},
+        '${user_name}',
         '${address}'
         
       )`;
